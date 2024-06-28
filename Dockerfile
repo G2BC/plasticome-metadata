@@ -32,4 +32,4 @@ RUN poetry install --no-root
 
 # Startup
 ENV FLASK_APP=plasticome_metadata.routes.app.py
-CMD [ "flask", "run" , "-h", "0.0.0.0"]
+CMD [ "flask", "run" , "-h", "metadata"]
