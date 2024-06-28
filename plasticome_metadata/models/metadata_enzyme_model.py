@@ -30,6 +30,6 @@ class EnzymePlasticTypes(BaseModel):
     )
 
 
-# database.connect()
-# database.create_tables([PlasticTypes, EnzymeMetadata, EnzymePlasticTypes])
-# database.close()
+database.connect()
+database.create_tables([PlasticTypes, EnzymeMetadata, EnzymePlasticTypes])
+database.close()
