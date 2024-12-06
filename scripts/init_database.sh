@@ -12,7 +12,6 @@ if [ -f /dump/plasticome-psql-v1.sql.lzo ]; then
     echo "Restaurando o banco de dados a partir do dump..."
     psql -U "$POSTGRES_USER" -d "$POSTGRES_DB" -f /dump/plasticome-psql-v1.sql
     echo "Restauração do banco de dados concluída!"
-    python create_user.py
 
 else
     echo "Dump não encontrado em /dump/plasticome-psql-v1.sql.lzo"
