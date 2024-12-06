@@ -16,7 +16,7 @@ def create_user(username: str, secret: str):
         hashed_secret = hash_secret(secret)
 
         PlasticomeUsers.create(username=username, secret=hashed_secret)
-        return True, None
+        return True, 'User created successfully'
     except IntegrityError:
         return False, 'This username already exists'
     except Exception as error:

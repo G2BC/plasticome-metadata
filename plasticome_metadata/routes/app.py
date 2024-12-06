@@ -30,6 +30,8 @@ from plasticome_metadata.controllers.user_controller import authenticate_user
 from plasticome_metadata.services.user_service import create_user
 
 load_dotenv(override=True)
+result = create_user(os.getenv('PLASTICOME_USER'), os.getenv('PLASTICOME_PASSWORD'))
+print(result)
 
 server = Flask(__name__)
 
@@ -138,5 +140,4 @@ def get_plastic_enzymes_route(enzyme_id):
 def delete_plastic_enzyme_route(registered_id):
     return delete_plastic_enzyme(registered_id)
 
-create_user('plasticome', 'admin')
 server.run()
