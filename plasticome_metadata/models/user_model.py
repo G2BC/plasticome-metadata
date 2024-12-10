@@ -13,6 +13,6 @@ class PlasticomeUsers(BaseModel):
     secret = CharField()
 
 
-# database.connect()
-# database.create_tables([PlasticomeUsers])
-# database.close()
+database.connect()
+database.create_tables([PlasticomeUsers])
+database.close()
